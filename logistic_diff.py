@@ -1,4 +1,4 @@
-#Plotting  plot the logistic difference equation
+# Plotting Chaos: To plot the logistic difference equation
 # Equation >> f(x+1) = l*f(x)*(1-f(x))
 
 # Importing libraries
@@ -46,11 +46,17 @@ print(f'Value of Constant is  {l} and initial random value is {x0}')
 
 global n
 n = 1
+
+
 x = check(x0, l, r)  # calling the outer function
 
 # Sorting the dictionary for their key values
 lists = sorted(x.items())
 x_val, function_val = zip(*lists)
+
+# Plotting the Values
 plt.plot(x_val, function_val)
-plt.title('Lo')
+plt.title('Logistic Difference Graph')
+plt.xlabel('Number of Rounds')
+plt.ylabel('Value of Logistic Diff. Function')
 plt.show()
